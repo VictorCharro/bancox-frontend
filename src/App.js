@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
+import CriarConta from "./paginas/criarConta";
+import Login from "./paginas/login";
+import "./App.css";
+
+function HomePage() {
+  const navigate = useNavigate();
+
+  const handleCriarConta = () => {
+    navigate("/criar-conta");
+  };
+
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
+  return (
+    <>
+      <div className="App">
+        <h1>BancoX</h1>
+      </div>
+      <div className="Botao-criar-conta">
+        <button onClick={handleCriarConta}>Criar Conta</button>
+        <button onClick={handleLogin}>Login</button>
+      </div>
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/criar-conta" element={<CriarConta />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
