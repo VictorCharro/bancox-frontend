@@ -7,27 +7,15 @@ import {
 import CriarConta from "./paginas/criarConta";
 import Login from "./paginas/login";
 import "./App.css";
+import Navbar from "./paginas/navbar";
 
 function HomePage() {
   const navigate = useNavigate();
 
-  const handleCriarConta = () => {
-    navigate("/criar-conta");
-  };
-
-  const handleLogin = () => {
-    navigate("/login");
-  };
-
   return (
     <>
-      <div className="App">
-        <h1>BancoX</h1>
-      </div>
-      <div className="Botao-criar-conta">
-        <button onClick={handleCriarConta}>Criar Conta</button>
-        <button onClick={handleLogin}>Login</button>
-      </div>
+      <Navbar />
+      <h1>Página em construção</h1>
     </>
   );
 }

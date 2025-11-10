@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./criarConta.css";
+import Navbar from "./navbar";
 
 function CriarConta() {
   const [formData, setFormData] = useState({
     nomeDoTitular: "",
     cpf: "",
+    senha: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/contas", formData);
+      await axios.post("http://localhost:8080/conta", formData);
       alert("Conta criada com sucesso!");
     } catch (error) {
-      alert("Erro ao criar conta");
+      alert(error.response.data.message || "Erro ao criar conta.");
       console.error("Erro:", error);
     }
   };
@@ -27,32 +29,57 @@ function CriarConta() {
   };
 
   return (
-    <div className="criar-conta-container">
-      <h2>Criar Nova Conta</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nome do Titular:</label>
-          <input
-            type="text"
-            name="nomeDoTitular"
-            value={formData.nomeDoTitular}
-            onChange={handleChange}
-            required
-          />
+    <>
+      <Navbar />
+      <div className="criar-conta-container">
+        <h2>Criar Nova Conta</h2>
+        <div className="info-criar-conta">
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Nome do Titular:</label>
+              <input
+                type="text"
+                name="nomeDoTitular"
+                value={formData.nomeDoTitular}
+                placeholder="ex: João da Silva"
+                title="Digite seu nome completo"
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>CPF:</label>
+              <input
+                type="text"
+                name="cpf"
+                value={formData.cpf}
+                maxLength={11}
+                pattern="\d{11}"
+                placeholder="ex: 12345678901"
+                title="O CPF deve conter exatamente 11 dígitos numéricos."
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>Senha:</label>
+              <input
+                type="password"
+                name="senha"
+                maxLength={4}
+                pattern="\d{4}"
+                title="A senha deve ter 4 dígitos númericos"
+                value={formData.senha}
+                onChange={handleChange}
+                placeholder="Digite 4 números"
+                required
+              />
+            </div>
+            <button type="submit">Criar Conta</button>
+          </form>
         </div>
-        <div>
-          <label>CPF:</label>
-          <input
-            type="text"
-            name="cpf"
-            value={formData.cpf}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Criar Conta</button>
-      </form>
-    </div>
+      </div>
+    </>
   );
 }
 

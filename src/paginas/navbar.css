@@ -1,0 +1,41 @@
+.Navbar {
+  background-color: #e6e6e66e;
+  padding: 5px 40px;
+  color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar .Logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.Navbar .Botoes-1 {
+  display: flex;
+  gap: 20px;
+}
+
+.Navbar button {
+  text-align: center;
+  gap: 8px;
+  padding: 13px 18px;
+  align-items: center;
+  margin-left: 0px;
+  display: inline-flex;
+  border-radius: 15px;
+  border: none;
+  background-color: #eeeeee;
+  font-size: 15px;
+  font-weight: bold;
+  color: #6a0dad;
+  cursor: pointer;
+}
+
+.Navbar button:hover {
+  background-color: #e0e0e0;
+  color: #6a0dad;
+}
