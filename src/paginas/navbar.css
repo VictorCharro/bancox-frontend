@@ -1,5 +1,5 @@
 .Navbar {
-  background-color: #e6e6e66e;
+  background-color: #dfdcdf;
   padding: 5px 40px;
   color: #f3f3f3;
   display: flex;
@@ -31,11 +31,11 @@
   background-color: #eeeeee;
   font-size: 15px;
   font-weight: bold;
-  color: #6a0dad;
+  color: #5c294b;
   cursor: pointer;
 }
 
 .Navbar button:hover {
-  background-color: #e0e0e0;
-  color: #6a0dad;
+  background-color: #5c294b;
+  color: #ffffff;
 }

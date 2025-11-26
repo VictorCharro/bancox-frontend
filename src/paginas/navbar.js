@@ -21,7 +21,7 @@ function Navbar() {
     <div className="Navbar">
       <div className="Logo">
         <img
-          src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=6a0dad"
+          src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=5c294b"
           alt="Logo"
           className="Logo"
           width="50"

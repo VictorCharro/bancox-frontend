@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 
 function CriarConta() {
   const [formData, setFormData] = useState({
-    nomeDoTitular: "",
+    nome: "",
     cpf: "",
     senha: "",
   });
@@ -16,8 +16,12 @@ function CriarConta() {
       await axios.post("http://localhost:8080/conta", formData);
       alert("Conta criada com sucesso!");
     } catch (error) {
-      alert(error.response.data.message || "Erro ao criar conta.");
-      console.error("Erro:", error);
+      console.error("Erro detalhado:", error);
+      const mensagemErro =
+        error.response?.data?.message ||
+        "Erro de conexão ou CORS. O backend está rodando?";
+
+      alert(mensagemErro);
     }
   };
 

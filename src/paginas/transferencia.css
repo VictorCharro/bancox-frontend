@@ -1,21 +1,23 @@
-.criar-conta-container {
+.container-transferencia {
   box-shadow: 0px 0px 2px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   border-radius: 10px;
   width: 400px;
   margin: 80px auto;
-  padding: 30px;
+  padding: 40px;
   background-color: #f5f5f5;
+  text-align: center;
+  color: #5c294b;
 }
 
-.criar-conta-container h2 {
+.container-transferencia h2 {
   text-align: center;
   margin-top: 20px;
   color: #5c294b;
   margin-bottom: 30px;
 }
 
-.criar-conta-container form {
+.container-transferencia form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +26,7 @@
   margin-top: 20px;
 }
 
-.criar-conta-container button {
-  gap: 8px;
+.container-transferencia button {
   padding: 13px 18px;
   border-radius: 15px;
   border: none;
@@ -34,33 +35,26 @@
   font-weight: bold;
   color: #5c294b;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.criar-conta-container button:hover {
+.container-transferencia button:hover {
   background-color: #5c294b;
   color: white;
 }
 
-.info-criar-conta {
-  margin-top: 20px;
-  text-align: center;
-  color: #5c294b;
-}
-
-.info-criar-conta input {
-  margin-left: 10px;
-  padding: 7px 7px;
+.container-transferencia input {
+  margin-left: 5px;
+  padding: 6px 9px;
   border-radius: 5px;
   border: #5c294b solid 1px;
 }
 
-.info-criar-conta input:focus {
+.container-transferencia input:focus {
   outline: none;
   box-shadow: 0 0 5px #5c294b;
 }
 
-.info-criar-conta label {
+.container-transferencia label {
   font-weight: 500;
 }
