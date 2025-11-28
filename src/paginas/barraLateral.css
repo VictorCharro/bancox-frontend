@@ -1,0 +1,108 @@
+/* --- Estilos Padrão (Desktop) --- */
+.barra-navegacao-lateral {
+  width: 200px;
+  border-right: 0.5px solid #ccc;
+  border-color: rgba(0, 0, 0, 0.103);
+  color: #5c294b;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background-color: #d8d6d8;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.barra-navegacao-lateral ul {
+  list-style-type: none;
+  margin-top: 5px;
+  width: 100%;
+  margin-left: -15%;
+}
+
+.barra-navegacao-lateral li {
+  margin: 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.barra-navegacao-lateral li:hover {
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+.botao-menu-mobile,
+.botao-fechar,
+.overlay {
+  display: none;
+}
+
+.Logo{
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .botao-menu-mobile {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    background: #f3f0f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .botao-menu-mobile.aberto {
+    transform: translateX(-10000%);
+  }
+
+  .barra-navegacao-lateral {
+    transform: translateX(-100%);
+    width: 250px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .barra-navegacao-lateral.aberta {
+    transform: translateX(0);
+  }
+
+  .botao-fechar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #5c294b;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+  }
+
+  .overlay.ativo {
+    display: block;
+  }
+}
+

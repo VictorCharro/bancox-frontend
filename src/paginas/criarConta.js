@@ -43,8 +43,8 @@ function CriarConta() {
               <label>Nome do Titular:</label>
               <input
                 type="text"
-                name="nomeDoTitular"
-                value={formData.nomeDoTitular}
+                name="nome"
+                value={formData.nome}
                 placeholder="ex: João da Silva"
                 title="Digite seu nome completo"
                 onChange={handleChange}

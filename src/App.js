@@ -11,6 +11,8 @@ import "./App.css";
 import Navbar from "./paginas/navbar";
 import Dashboard from "./paginas/dashboard";
 import Transferencia from "./paginas/transferencia";
+import Extrato from "./paginas/extrato";
+import PagarBoleto from "./paginas/pagarBoleto";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -50,6 +52,8 @@ function App() {
             )
           }
         />
+        <Route path="/extrato" element={<Extrato />} />
+        <Route path="/boleto" element={<PagarBoleto />} />
       </Routes>
     </Router>
   );

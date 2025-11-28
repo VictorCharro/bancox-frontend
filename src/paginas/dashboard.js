@@ -4,16 +4,13 @@ import "./dashboard.css";
 import Navbar from "./navbar";
 import Transferencia from "./transferencia";
 import { useNavigate } from "react-router-dom";
+import BarraLateral from "./barraLateral";
 
 function Dashboard() {
   const navigate = useNavigate();
   const [conta, setConta] = useState(null);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
-
-  const irPara = (caminho) => {
-    navigate(caminho);
-  };
 
   useEffect(() => {
     buscarDadosConta();
@@ -51,103 +48,17 @@ function Dashboard() {
 
   return (
     <>
-      <Navbar />
-      <div className="barra-navegacao-lateral">
-        <ul>
-          <li
-            onClick={() => irPara("/dashboard")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              cursor: "pointer",
-            }}
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=i6fZC6wuprSu&format=png&color=5c294b"
-              alt="icone dashboard"
-              style={{ width: "25px", height: "25px" }}
-            />
-            Dashboard
-          </li>
-
-          <li
-            onClick={() => irPara("/transferencia")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              cursor: "pointer",
-            }}
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=wg9WtIJS8aab&format=png&color=5c294b"
-              alt="icone dashboard"
-              style={{ width: "25px", height: "25px" }}
-            />
-            Transferir
-          </li>
-
-          <li
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              cursor: "pointer",
-            }}
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=ug2XGChtvMcG&format=png&color=5c294b"
-              alt="icone dashboard"
-              style={{ width: "25px", height: "25px" }}
-            />
-            Pagar Boleto
-          </li>
-
-          <li
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              cursor: "pointer",
-            }}
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=zIkQ49tnUc0z&format=png&color=5c294b"
-              alt="icone dashboard"
-              style={{ width: "25px", height: "25px" }}
-            />
-            Extrato
-          </li>
-
-          <li
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              cursor: "pointer",
-            }}
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=ybfklM8wYSX1&format=png&color=5c294b"
-              alt="icone dashboard"
-              style={{ width: "25px", height: "25px" }}
-            />
-            Configurações
-          </li>
-        </ul>
-      </div>
+      <BarraLateral />
       <div className="dashboard-container">
-        <h2>Dashboard</h2>
-        <p>Bem-vindo, {conta.nome}!</p>
-        <p>
+        <p className="bem-vindo">Bem-vindo, {conta.nome}!</p>
+        <p className="saldo">
           Saldo: R${" "}
           {Number(conta.saldo || 0).toLocaleString("pt-BR", {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
           })}
         </p>
-        <p>Conta: {conta.numeroDaConta}</p>
+        <p className="conta">Conta: {conta.numeroDaConta}</p>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-.container-transferencia {
+.pagar-boleto-container {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 40%;
@@ -9,14 +9,7 @@
   color: #5c294b;
 }
 
-.container-transferencia h2 {
-  text-align: center;
-  margin-top: 20px;
-  color: #5c294b;
-  margin-bottom: 30px;
-}
-
-.container-transferencia form {
+.form-pagar-boleto {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +18,7 @@
   margin-top: 20px;
 }
 
-.container-transferencia button {
+.pagar-boleto-container button {
   padding: 13px 18px;
   border-radius: 15px;
   border: none;
@@ -37,23 +30,23 @@
   margin-top: 10px;
 }
 
-.container-transferencia button:hover {
+.pagar-boleto-container button:hover {
   background-color: #5c294b;
   color: white;
 }
 
-.container-transferencia input {
+.pagar-boleto-container input {
   margin-left: 5px;
   padding: 6px 9px;
   border-radius: 5px;
   border: #5c294b solid 1px;
 }
 
-.container-transferencia input:focus {
+.pagar-boleto-container input:focus {
   outline: none;
   box-shadow: 0 0 5px #5c294b;
 }
 
-.container-transferencia label {
+.pagar-boleto-container label {
   font-weight: 500;
 }

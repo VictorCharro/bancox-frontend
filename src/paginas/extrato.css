@@ -1,0 +1,94 @@
+.container-extrato {
+  max-width: 60%;
+  margin: 80px auto;
+  width: 40%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-extrato h2 {
+  color: #5c294b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lista-transacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.card-transacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ececec;
+  border-left: 5px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-transacao.entrada {
+  border-left-color: #2ecc71;
+}
+.card-transacao.entrada .valor-transacao {
+  color: #2ecc71;
+}
+
+.card-transacao.saida {
+  border-left-color: #e74c3c;
+}
+.card-transacao.saida .valor-transacao {
+  color: #e74c3c;
+}
+
+.info-transacao {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.descricao {
+  font-size: 1rem;
+  color: #333;
+}
+
+.valor-transacao {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.sem-transacoes {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+.btn-voltar {
+  display: flex;
+  margin: 20px auto 0 auto;
+  padding: 13px 18px;
+  border-radius: 15px;
+  border: none;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #5c294b;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-voltar:hover {
+  background-color: #5c294b;
+  color: #ffffff;
+}
