@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./dashboard.css";
-import Navbar from "./navbar";
-import Transferencia from "./transferencia";
 import { useNavigate } from "react-router-dom";
 import BarraLateral from "./barraLateral";
 

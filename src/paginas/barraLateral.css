@@ -1,4 +1,3 @@
-/* --- Estilos Padrão (Desktop) --- */
 .barra-navegacao-lateral {
   width: 200px;
   border-right: 0.5px solid #ccc;
@@ -46,7 +45,7 @@
   display: none;
 }
 
-.Logo{
+.Logo {
   cursor: pointer;
 }
 
@@ -105,4 +104,3 @@
     display: block;
   }
 }
-

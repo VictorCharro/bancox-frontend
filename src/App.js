@@ -13,6 +13,8 @@ import Dashboard from "./paginas/dashboard";
 import Transferencia from "./paginas/transferencia";
 import Extrato from "./paginas/extrato";
 import PagarBoleto from "./paginas/pagarBoleto";
+import Depositar from "./paginas/depositar";
+import Configuracoes from "./paginas/configuracoes";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -54,6 +56,8 @@ function App() {
         />
         <Route path="/extrato" element={<Extrato />} />
         <Route path="/boleto" element={<PagarBoleto />} />
+        <Route path="/depositar" element={<Depositar />} />
+        <Route path="/configuracoes" element={<Configuracoes />} />
       </Routes>
     </Router>
   );

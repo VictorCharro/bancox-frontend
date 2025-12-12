@@ -13,22 +13,26 @@ function BarraLateral() {
 
   return (
     <>
-      <button 
+      <button
         className={`botao-menu-mobile ${menuAberto ? "aberto" : ""}`}
         onClick={() => setMenuAberto(!menuAberto)}
       >
-        <img src="https://img.icons8.com/?size=100&id=3096&format=png&color=5c294b" alt="Menu" width="30" height="30"/>
+        <img
+          src="https://img.icons8.com/?size=100&id=3096&format=png&color=5c294b"
+          alt="Menu"
+          width="30"
+          height="30"
+        />
       </button>
 
-      <div 
-        className={`overlay ${menuAberto ? "ativo" : ""}`} 
+      <div
+        className={`overlay ${menuAberto ? "ativo" : ""}`}
         onClick={() => setMenuAberto(false)}
       />
 
       <div className={`barra-navegacao-lateral ${menuAberto ? "aberta" : ""}`}>
-        
         <button className="botao-fechar" onClick={() => setMenuAberto(false)}>
-            &times;
+          &times;
         </button>
 
         <div className="Logo">
@@ -41,7 +45,7 @@ function BarraLateral() {
             onClick={() => handleNavegacao("/dashboard")}
           />
         </div>
-        
+
         <ul>
           <li onClick={() => handleNavegacao("/dashboard")}>
             <img
@@ -51,6 +55,16 @@ function BarraLateral() {
               height="25"
             />
             Dashboard
+          </li>
+
+          <li onClick={() => handleNavegacao("/depositar")}>
+            <img
+              src="https://img.icons8.com/?size=100&id=35072&format=png&color=5c294b"
+              alt="icone transferir"
+              width="25"
+              height="25"
+            />
+            Depositar
           </li>
 
           <li onClick={() => handleNavegacao("/transferencia")}>
@@ -91,6 +105,15 @@ function BarraLateral() {
               height="25"
             />
             Configurações
+          </li>
+          <li onClick={() => handleNavegacao("/")}>
+            <img
+              src="https://img.icons8.com/?size=100&id=2659&format=png&color=5c294b"
+              alt="icone sair"
+              width="25"
+              height="25"
+            />
+            Sair
           </li>
         </ul>
       </div>
